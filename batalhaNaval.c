@@ -121,13 +121,13 @@ void DesenharCone(int x, int y)
 
     if (x >= 0 && x + 3 <= H && y >= 0 && y + 5 <= V) // checa se o cone cabe no tabuleiro
     {
-        for (int i = 0; i < 3; i++) // percorre o array
+        for (int j = 0; j < 3; j++) // percorre o array
         {
-            for (int j = 0; j < 5; j++) // percorre o array
+            for (int i = 0; i < 5; i++) // percorre o array
             {
-                if (cone[i][j] == 1)    // checa se a posição é 1 no array
+                if (cone[j][i] == 1)    // checa se a posição é 1 no array
                 {
-                    tabuleiro[x + i][y + j] = 1;    // desenha o cone
+                    tabuleiro[x + i][y + j] = 5;    // desenha o cone
                 }
             }
         }
@@ -156,7 +156,7 @@ void DesenharOctaedro(int x, int y)
             for (int j = 0; j < 5; j++) // percorre o array
             {
                 if(octaedro[i][j] == 0) continue;   // checa se a posição é 1 no array, se não, ignora
-                tabuleiro[x + i][y + j] = octaedro[i][j];   // desenha o octaedro
+                tabuleiro[x + i][y + j] = 7;   // desenha o octaedro
             }
         }
     }
@@ -183,7 +183,7 @@ void DesenharCruz(int x, int y)
             {
                 if (cruz[i][j] == 1)    // checa se é 1 no array
                 {
-                    tabuleiro[x + i][y + j] = 1;    // desenha a cruz
+                    tabuleiro[x + i][y + j] = 9;    // desenha a cruz
                 }
             }
         }
